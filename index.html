@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title and logo -->
+    <title>Green Earth</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/hero-leaf1.png"
+      type="image/x-icon"
+    />
+
+    <!-- fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font intregation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind & Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+<header>
+  <div class="navbar bg-[#15803d] text-white px-2 sm:px-10 md:px-16">
+    <!-- Left logo -->
+    <div class="navbar-start">
+        <img src="./assets/about.png" class="w-4 h-4" alt="">
+        <h1 class=" text-xl">Green Earth</h1>
+    </div>
+
+    <!-- navbar center part -->
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 font-medium">
+        <li><a href="#about" class="hover:text-yellow-300">About</a></li>
+        <li><a href="#gallery" class="hover:text-yellow-300">Gallery</a></li>
+        <li><a href="#plant" class="hover:text-yellow-300">Plant a Tree</a></li>
+      </ul>
+    </div>
+
+    <!-- Right side Button -->
+    <div class="navbar-end">
+      <button class="btn btn-sm rounded-full bg-[#facc15] text-[#15803d] border-none hover:bg-yellow-300" >Plant a Tree</button>
+
+      <!-- Mobile menu dropdown part -->
+      <div class="dropdown dropdown-end lg:hidden ml-2">
+        <div tabindex="0" role="button" class="btn btn-ghost text-[#dece7c] hover:bg-[#96ca96] ">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </div>
+        <ul tabindex="0"
+            class="menu menu-sm dropdown-content bg-[#178a41] text-white rounded-box mt-3 w-40 p-2 shadow">
+          <li><a href="#about" class="hover:text-yellow-300">About</a></li>
+          <li><a href="#gallery" class="hover:text-yellow-300">Gallery</a></li>
+          <li><a href="#plant" class="hover:text-yellow-300">Plant a Tree</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- banner section-->
+<section id="home" class="relative overflow-hidden ">
+  <!-- banner contain and color -->
+  <div class="bg-[#cff0dc]">
+    <div class="max-w-6xl mx-auto px-4 py-14 md:py-20 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-[#1F2937]">
+        Plant a Tree, Grow a Future
+      </h1>
+      <p class="mt-3 max-w-2xl mx-auto text-sm md:text-base text-[#4a5d77]">
+        Join our mission to plant 1 million trees and make the Earth greener for future
+        generations.
+      </p>
+
+      <button class="btn btn-sm mt-6  rounded-full bg-[#facc15] text-[#15803d] border-none hover:bg-yellow-300">Get Involved</button>
+    </div>
+  </div>
+
+  <!-- image for banner-->
+  <img src="./assets/hero-leaf1.png" alt="" aria-hidden="true"
+       class=" sm:block absolute left-4 bottom-0 w-20 sm:w-40 md:w-50 lg:w-65 xl:w-90 2xl:w-110 " />
+  <img src="./assets/hero-leaf2.png" alt="" aria-hidden="true"
+       class=" sm:block absolute right-4 bottom-0 w-20 sm:w-40 md:w-50 lg:w-65 xl:w-90 2xl:w-110" />
+</section>
+
+  </body>
+</html>
+
