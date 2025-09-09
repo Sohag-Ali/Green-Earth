@@ -133,7 +133,7 @@
       />
     </section>
 
-    <!-- CHOOSE YOUR TREES (final layout like screenshot) -->
+    <!-- choose the tree section part and tree card show here and card added and deleted-->
     <section class="bg-[#e9f8ef] py-12">
       <div class="w-11/12 mx-auto px-2">
         <h2
@@ -142,149 +142,38 @@
           Choose Your Trees
         </h2>
 
-        <!-- AFTER -->
-        <div
-          class="mt-8 grid gap-6 grid-cols-1 md:[grid-template-columns:minmax(0,1fr)_minmax(0,4fr)_minmax(0,1fr)] items-start"
-        >
-          <!-- LEFT: Categories -->
-          <aside class="h-max">
-            <div class="rounded-2xl bg-white p-4">
-              <h3 class="font-semibold mb-3 text-slate-800">Categories</h3>
-              <div>
-                <button
-                  class="flex items-center gap-3 rounded-md bg-[#178a41] text-white px-3 py-2 w-full mb-3 hover:bg-yellow-300 cursor-pointer"
-                >
-                  <span class="inline-block">All Trees</span>
-                </button>
-              </div>
-              <div id="category-button" class="space-y-2 text-sm">
-                <!-- active item -->
-              </div>
-            </div>
-          </aside>
-
-          <!-- MIDDLE: Card grid -->
-          <div class="min-w-0">
-            <div
-              id="card-container"
-              class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3"
-            >
-              <!-- Card -->
-
-              <article class="rounded-2xl bg-white p-3">
-                <div
-                  class="rounded-xl bg-slate-100 h-40 overflow-hidden flex items-center justify-center"
-                >
-                  <img
-                    src="./assets/about.png"
-                    alt=""
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-                <div class="mt-3">
-                  <h4 class="font-medium text-sm text-slate-800">Mango Tree</h4>
-                  <p class="text-xs text-slate-600 mt-1">
-                    A fast-growing tropical tree that produces delicious, juicy
-                    mangoes during summer.
-                  </p>
-                  <div class="mt-2 flex items-center justify-between text-sm">
-                    <span
-                      class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700"
-                      >Fruit Tree</span
-                    >
-                    <span class="font-semibold text-slate-800">৳500</span>
-                  </div>
-                  <button
-                    class="w-full mt-3 h-9 rounded-full bg-[#178a41] text-white text-sm"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </article>
-
-              <article class="rounded-2xl bg-white p-3">
-                <div class="rounded-xl bg-slate-100 h-40"></div>
-                <div class="mt-3">
-                  <h4 class="font-medium text-sm text-slate-800">Mango Tree</h4>
-                  <p class="text-xs text-slate-600 mt-1">
-                    A fast-growing tropical tree that produces delicious, juicy
-                    mangoes during summer.
-                  </p>
-                  <div class="mt-2 flex items-center justify-between text-sm">
-                    <span
-                      class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700"
-                      >Fruit Tree</span
-                    >
-                    <span class="font-semibold text-slate-800">৳500</span>
-                  </div>
-                  <button
-                    class="w-full mt-3 h-9 rounded-full bg-[#178a41] text-white text-sm"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </article>
-              <article class="rounded-2xl bg-white p-3">
-                <div class="rounded-xl bg-slate-100 h-40"></div>
-                <div class="mt-3">
-                  <h4 class="font-medium text-sm text-slate-800">Mango Tree</h4>
-                  <p class="text-xs text-slate-600 mt-1">
-                    A fast-growing tropical tree that produces delicious, juicy
-                    mangoes during summer.
-                  </p>
-                  <div class="mt-2 flex items-center justify-between text-sm">
-                    <span
-                      class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700"
-                      >Fruit Tree</span
-                    >
-                    <span class="font-semibold text-slate-800">৳500</span>
-                  </div>
-                  <button
-                    class="w-full mt-3 h-9 rounded-full bg-[#178a41] text-white text-sm"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- RIGHT: Your Cart -->
-          <aside class="h-max">
-            <div class="rounded-2xl bg-white p-4">
-              <h3 class="font-semibold text-slate-800">Your Cart</h3>
-              <ul class="mt-2 space-y-2 text-sm">
-                <li
-                  class="flex items-center justify-between gap-2 rounded-lg bg-[#f6fbf8] px-3 py-2"
-                >
-                  <div>
-                    <div class="font-medium">Mango Tree</div>
-                    <div class="opacity-70 text-xs">৳500 × 1</div>
-                  </div>
-                  <span class="text-slate-400 text-lg">×</span>
-                </li>
-                <li
-                  class="flex items-center justify-between gap-2 rounded-lg bg-[#f6fbf8] px-3 py-2"
-                >
-                  <div>
-                    <div class="font-medium">Guava Tree</div>
-                    <div class="opacity-70 text-xs">৳500 × 1</div>
-                  </div>
-                  <span class="text-slate-400 text-lg">×</span>
-                </li>
-              </ul>
-              <div class="my-3 h-px bg-slate-200"></div>
-              <div class="flex justify-between font-semibold">
-                <span>Total:</span>
-                <span>৳1000</span>
-              </div>
-            </div>
-          </aside>
-        </div>
+         <div id="spinner" class="flex justify-center items-center hidden">
+        <span class="loading loading-bars loading-xl"></span>
       </div>
+      <section
+        id="all-container" class="w-11/12 grid grid-cols-12 gap-7 max-w-[1920px] mx-auto">
+
+        <div id="category-container" class="col-span-12 md:col-span-2 md:text-start text-center list-none space-y-3 cursor-pointer">
+          <h3 class="font-semibold text-[17px] mb-2">Categories</h3>
+          <li onclick="allPlants()" class="bg-[#3b813e] p-2 text-white rounded-xl">All Tree</li>
+
+        </div>
+
+        <div id="tree-card-container" class="md:col-span-8 col-span-12 grid grid-cols-1 gap-4 md:grid-cols-3 items-stretch">
+                
+        </div>
+
+        <div class="md:col-span-2 col-span-12 bg-white p-3 rounded-2xl">
+          <h3 class="font-semibold text-[17px] mb-2 ">Your Cart</h3>
+          <div id="cart-container">
+
+
+          </div>
+          <!-- cart adder and deleted -->
+          <div class="flex justify-between items-center border-t-1 border-gray-300">
+            <p>Total:</p>
+            <p>৳<span id="total">0</span></p>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <!-- ABOUT THE CAMPAIGN -->
+    <!-- about the campaign-->
 <section class="bg-[#e9f8ef] py-16">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-center text-2xl md:text-3xl font-semibold text-slate-800 mb-10">
@@ -319,7 +208,7 @@
   </div>
 </section>
 
-<!-- ========== OUR IMPACT ========== -->
+<!-- our impact -->
 <section class="bg-[#dff5e8] py-14">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-center text-slate-800 font-semibold text-2xl md:text-3xl">Our Impact</h2>
@@ -344,7 +233,7 @@
   </div>
 </section>
 
-<!-- ========== PLANT A TREE TODAY (CTA) ========== -->
+<!-- plant a tree today -->
 <section class="bg-[#0f6a34] py-16">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-center text-white font-semibold text-xl md:text-2xl">Plant a Tree Today</h2>
@@ -368,7 +257,7 @@
   </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- footer -->
 <footer class="bg-[#0b4f29] text-white">
   <div class="max-w-6xl mx-auto px-4">
     <div class="py-4 text-center text-xs opacity-90">
