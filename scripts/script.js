@@ -165,7 +165,7 @@ const plantByCategories = async (id) => {
 const addToCart = (name, price) => {
   const div = document.createElement("div");
   div.innerHTML = `
-    <div class="rounded-2xl p-4 bg-[#f0fdf4] mb-2 flex justify-between items-center">
+    <div class="rounded-xl p-4 bg-[#f0fdf4] mb-2 flex justify-between items-center">
     <div class="space-y-1">
     <p class="text-[12px] font-semibold">${name}</p>
     <p class="text-[#889396] price">${price}<i class="fa-solid fa-xmark text-sm"></i> ${1}</p>
