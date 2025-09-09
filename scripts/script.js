@@ -1,5 +1,5 @@
 
-//all container stored here//
+// container dom catch here.............
 let allPlantsCache = [];
 const categoryContainer = document.getElementById("category-container");
 const treeCardContainer = document.getElementById("tree-card-container");
@@ -8,8 +8,8 @@ const detailsContainer = document.getElementById("details-container");
 const total = parseInt(document.getElementById("total").innerText);
 let totalPrice = 0;
 
-//tree category load
-//load category is done
+
+//load category .................
 const loadTreeCategories = async () => {
     try {
   const response = await fetch(
@@ -46,7 +46,7 @@ const loadTreeCategories = async () => {
 }
 };
 
-//All plants
+//All plants fetch here................
 const allPlants = async () => {
   const response = await fetch(
     "https://openapi.programming-hero.com/api/plants"
@@ -88,7 +88,7 @@ const allPlants = async () => {
   spinner(false);
 };
 
-//both load tree category and plants are call from here
+//both load category and plants masage show ..............
 const initializeApp = async () => {
     await Promise.all([loadTreeCategories(), allPlants()]);
 };
@@ -96,7 +96,6 @@ initializeApp();
 
 
 
-//tree detail load
 const loadTreeDetail = async (id) => {
   const response = await fetch(
     `https://openapi.programming-hero.com/api/plant/${id}`
@@ -109,21 +108,18 @@ const loadTreeDetail = async (id) => {
 const showModal = (data) => {
   detailsContainer.innerHTML = `
      <div class="flex flex-col justify-center h-full w-full space-y-3">
-  <h3 class="font-bold text-lg">${data.name}</h3>
-  
-  <img class="w-full h-40 object-cover rounded-lg mx-auto" src="${data.image}" alt="">
-  
-  <p class="text-sm">Category: <span class="font-medium">${data.category}</span></p>
-  <p class="text-sm">Price: ৳<span class="font-semibold">${data.price}</span></p>
-  <p class="text-sm leading-relaxed text-gray-600">
-    ${data.description}
-  </p>
-</div>
-    `;
+       <h3 class="font-bold text-lg">${data.name}</h3>
+       <img class="w-full h-40 object-cover rounded-lg mx-auto" src="${data.image}" alt="">
+       <p class="text-sm">Category: <span class="font-medium">${data.category}</span></p>
+       <p class="text-sm">Price: ৳<span class="font-semibold">${data.price}</span></p>
+       <p class="text-sm leading-relaxed text-gray-600">${data.description}</p>
+     </div>
+  `;
   document.getElementById("my_modal").showModal();
 };
 
-//get plants by categories
+
+//get plants by categories.............
 const plantByCategories = async (id) => {
   spinner(true);
   const response = await fetch(
@@ -165,7 +161,7 @@ const plantByCategories = async (id) => {
   spinner(false);
 };
 
-//add to cart
+//add to cart..............
 const addToCart = (name, price) => {
   const div = document.createElement("div");
   div.innerHTML = `
@@ -180,7 +176,7 @@ const addToCart = (name, price) => {
     cartContainer.appendChild(div);
     alert(`${name} has been added to the cart`);
 
-  //total
+  
   const total = parseInt(document.getElementById("total").innerText);
   const treePrice = parseInt(`${price}`);
 
@@ -188,7 +184,7 @@ const addToCart = (name, price) => {
   document.getElementById("total").innerText = totalPrice;
 };
 
-//delete cart item and price deduct
+//remove part.............
 cartContainer.addEventListener("click", (e) => {
   const total = parseInt(document.getElementById("total").innerText);
   if (e.target.tagName === "I") {
@@ -201,7 +197,7 @@ cartContainer.addEventListener("click", (e) => {
   }
 });
 
-//spinner
+//spinner added part .......
 const spinnerEl = document.getElementById("spinner");
 
 const spinner = (status) => {
