@@ -82,16 +82,6 @@ https://openapi.programming-hero.com/api/plant/${id}
 https://openapi.programming-hero.com/api/plant/1
 ```
 ---
-
-
-
-
-
-
-
-
-
-
 🧰 Technology Stack:
         
         HTML
@@ -100,14 +90,3 @@ https://openapi.programming-hero.com/api/plant/1
 
         JavaScript (Vanilla only, no frameworks)
 
-
-
-
-
-
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
-
----
